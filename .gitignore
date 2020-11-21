@@ -42,3 +42,6 @@ build/
 #luaJIT headers
 deps/LuaJIT-2.0.3/
 
+.idea
+test/press.up
+test/test
