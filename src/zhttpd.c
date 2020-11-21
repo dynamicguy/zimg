@@ -467,9 +467,9 @@ int on_chunk_data(multipart_parser* p, const char *at, size_t length) {
         mp_arg->succno++;
         LOG_PRINT(LOG_INFO, "%s succ post pic:%s size:%d", mp_arg->address, md5sum, length);
         evbuffer_add_printf(mp_arg->req->buffer_out,
-                            "<h1>MD5: %s</h1>\n"
+                            "<h1>%s</h1>\n"
                             "Image upload successfully! You can get this image via this address:<br/><br/>\n"
-                            "<a href=\"/%s\">http://yourhostname:%d/%s</a>?w=width&h=height&g=isgray&x=position_x&y=position_y&r=rotate&q=quality&f=format\n",
+                            "<a href=\"/%s\">https://yourhostname:%d/%s</a>?w=width&h=height&g=isgray&x=position_x&y=position_y&r=rotate&q=quality&f=format\n",
                             md5sum, md5sum, settings.port, md5sum
                            );
     }
